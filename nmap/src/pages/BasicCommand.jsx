@@ -45,6 +45,9 @@ const BasicCommands = () => {
           </li>
         ))}
       </ul>
+      <footer>
+          <p>Created by Harshal Moon for cybersecurity enthusiasts</p>
+        </footer>
     </div>
   );
 };

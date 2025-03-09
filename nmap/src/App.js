@@ -18,6 +18,7 @@ function App() {
         <Route path="/Simulator" element={<Simulator />} />
       </Routes>
     </Router>
+    
     </div>
   );
 }

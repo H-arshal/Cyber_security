@@ -15,7 +15,7 @@ const Simulator = () => {
   // Function to generate dynamic Nmap responses
   const generateResponse = (command, ip) => {
     const responses = {
-      "nmap": `Starting Nmap 7.92\nHost ${ip} is up.\nNot shown: 999 closed ports\nPORT   STATE SERVICE\n80/tcp open  http`,
+      nmap: `Starting Nmap 7.92\nHost ${ip} is up.\nNot shown: 999 closed ports\nPORT   STATE SERVICE\n80/tcp open  http`,
 
       "nmap -sS": `Starting Nmap 7.92\nHost ${ip} is up.\nNot shown: 998 closed ports\nPORT   STATE SERVICE\n22/tcp open  ssh\n80/tcp open  http`,
 
@@ -88,7 +88,10 @@ const Simulator = () => {
 
     // Extract the base command (e.g., "nmap -sS" from "nmap -sS 192.168.1.1")
     const baseCommand = command.split(" ").slice(0, -1).join(" ");
-    return responses[baseCommand] || `Error: Invalid or unsupported command for ${ip}.`;
+    return (
+      responses[baseCommand] ||
+      `Error: Invalid or unsupported command for ${ip}.`
+    );
   };
 
   // Handle command execution
@@ -98,7 +101,9 @@ const Simulator = () => {
 
     setTimeout(() => {
       // Extract IP address from the command
-      const ipMatch = command.match(/\b(?:\d{1,3}\.){3}\d{1,3}\b|(?:[a-fA-F0-9:]+:+)+[a-fA-F0-9]+\b/);
+      const ipMatch = command.match(
+        /\b(?:\d{1,3}\.){3}\d{1,3}\b|(?:[a-fA-F0-9:]+:+)+[a-fA-F0-9]+\b/
+      );
       const ip = ipMatch ? ipMatch[0] : "No IP provided";
 
       // Generate response dynamically
@@ -114,7 +119,9 @@ const Simulator = () => {
     <div className="terminal-container">
       <h2>Nmap Simulator</h2>
       <div className="terminal">
-        <pre>{output || "Welcome to Nmap Simulator. Enter a command to start."}</pre>
+        <pre>
+          {output || "Welcome to Nmap Simulator. Enter a command to start."}
+        </pre>
         {loading && <p className="loading">Scanning... 🔄</p>}
         <div className="input-line">
           <span>$</span>
@@ -136,6 +143,16 @@ const Simulator = () => {
           ))}
         </ul>
       </div>
+<footer>
+<p>
+          This simulator provides predefined responses and does not perform
+          actual port scanning.
+        </p>
+</footer>
+      <footer>
+
+        <p>Created by Harshal Moon for cybersecurity enthusiasts</p>
+      </footer>
     </div>
   );
 };
