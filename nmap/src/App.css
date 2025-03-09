@@ -1,0 +1,318 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.home-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  background: #1e1e1e;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+header {
+  padding: 20px;
+  background: #2e2e2e;
+  border-radius: 8px;
+}
+
+h1 {
+  color: #00ff00;
+}
+
+.intro, .features, .navigation {
+  margin: 20px 0;
+  padding: 15px;
+  background: #2e2e2e;
+  border-radius: 8px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  background: #00ff00;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  background: #00cc00;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background: #2e2e2e;
+  border-radius: 8px;
+}
+
+.commands-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #1e1e1e;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #00ff00;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #2e2e2e;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;              /* Enables flexbox */
+  justify-content: space-between; /* Aligns items properly */
+  align-items: center;        /* Centers vertically */
+}
+
+code {
+  font-family: "Courier New", monospace;
+  background: #444;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #00ff00;
+  white-space: nowrap;       /* Prevents breaking in smaller screens */
+  flex-shrink: 0;            /* Prevents the command from shrinking */
+}
+
+.description {
+  text-align: right;
+  flex-grow: 1;             /* Allows it to take remaining space */
+  margin-left: 20px;        /* Creates space between command & description */
+  color: #bbbbbb;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.simulator-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #1e1e1e;
+  color: #ffffff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+h2 {
+  color: #00ff00;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background: #2e2e2e;
+  color: #fff;
+}
+
+button {
+  background: #00ff00;
+  color: #000;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00cc00;
+}
+
+.loading {
+  color: #ffcc00;
+}
+
+.output {
+  background: #2e2e2e;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.history {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.history h3 {
+  color: #00ff00;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  background: #333;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.terminal-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #1e1e1e;
+  color: #ffffff;
+  border-radius: 8px;
+  font-family: "Courier New", monospace;
+}
+
+h2 {
+  color: #00ff00;
+  text-align: center;
+}
+
+.terminal {
+  background: #000;
+  color: #00ff00;
+  padding: 15px;
+  border-radius: 5px;
+  min-height: 300px;
+  overflow-y: auto;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.loading {
+  color: #ffcc00;
+  text-align: center;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.input-line span {
+  color: #00ff00;
+  margin-right: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: #222;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  border-radius: 3px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #555;
+}
+
+.history {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.history h3 {
+  color: #00ff00;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  background: #333;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: #00ff00;
+  font-size: 14px;
+  font-family: "Courier New", monospace;
+}
+
+button {
+  background: #00ff00;
+  color: #000;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #00cc00;
+}
+
+pre {
+  font-size: 14px;
+  text-align: left;
+  font-family: "Courier New", monospace;
+}
