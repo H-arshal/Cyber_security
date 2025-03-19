@@ -1,32 +1,33 @@
 import React from "react";
 import "../App.css"; // Import your CSS for styling
 
-const AdvancedCommands = () => {
+const AdvancedCommand = () => {
   const commands = [
-    { command: "nmap -sS target.com", description: "Perform a stealthy SYN scan." },
-    { command: "nmap -sU target.com", description: "Scan for open UDP ports." },
-    { command: "nmap -sT target.com", description: "Perform a full TCP connection scan." },
-    { command: "nmap -f target.com", description: "Fragment packets to evade detection." },
-    { command: "nmap -D RND:10 target.com", description: "Use decoy IPs to hide your real IP." },
-    { command: "nmap -S spoofed_ip target.com", description: "Spoof the source IP address." },
-    { command: "nmap -e eth0 target.com", description: "Scan using a specific network interface." },
-    { command: "nmap -g 53 target.com", description: "Scan using a specific source port." },
-    { command: "nmap --script=default target.com", description: "Run default NSE scripts." },
-    { command: "nmap --script=vuln target.com", description: "Use NSE scripts to detect vulnerabilities." },
-    { command: "nmap -oN output.txt target.com", description: "Save output to a file." },
-    { command: "nmap --traceroute target.com", description: "Perform a traceroute." },
-    { command: "nmap -6 target.com", description: "Scan an IPv6 address." },
-    { command: "nmap 192.168.1.0/24 --exclude 192.168.1.100", description: "Exclude specific hosts from scan." },
-    { command: "nmap -iL targets.txt", description: "Scan a list of targets from a file." },
-    { command: "nmap -sA target.com", description: "Detect firewall rules." },
-    { command: "nmap -sI zombie_ip target.com", description: "Perform an idle scan using a zombie host." },
-    { command: "nmap --script=/path/to/script.nse target.com", description: "Run a custom NSE script." },
-    { command: "nmap -p 443 --script=ssl-heartbleed target.com", description: "Check for Heartbleed vulnerability." },
+    { command: "traceroute -T target.com", description: "Use TCP SYN packets instead of default UDP." },
+    { command: "traceroute -I target.com", description: "Use ICMP Echo Request (like Windows tracert)." },
+    { command: "traceroute -U -p 53 target.com", description: "Send UDP packets to port 53 (DNS)." },
+    { command: "traceroute -P GRE target.com", description: "Trace routes using GRE (Generic Routing Encapsulation)." },
+    { command: "traceroute -F target.com", description: "Set 'Don't Fragment' flag to test MTU path." },
+    { command: "traceroute --mtu target.com", description: "Discover the path MTU (Maximum Transmission Unit)." },
+    { command: "traceroute -m 20 target.com", description: "Limit the maximum hops to 20." },
+    { command: "traceroute -n target.com", description: "Disable hostname resolution for faster tracing." },
+    { command: "traceroute -q 5 target.com", description: "Send 5 packets per hop instead of the default 3." },
+    { command: "traceroute -z 2 target.com", description: "Set a delay of 2 milliseconds between probes." },
+    { command: "traceroute -w 1.5 target.com", description: "Set a 1.5-second timeout per probe." },
+    { command: "traceroute -A target.com", description: "Show Autonomous System (AS) numbers for each hop." },
+    { command: "traceroute -g 192.168.1.1 target.com", description: "Specify a gateway to pass through." },
+    { command: "traceroute --back target.com", description: "Perform a reverse route trace (if supported)." },
+    { command: "traceroute --sport=4444 target.com", description: "Specify a custom source port (useful for bypassing firewalls)." },
+    { command: "traceroute --tcp-mss=1300 target.com", description: "Manually set the TCP Maximum Segment Size (MSS)." },
+    { command: "tcptraceroute target.com 443", description: "Perform a TCP traceroute to port 443." },
+    { command: "mtr --report target.com", description: "Use MTR (advanced traceroute with live monitoring)." },
+    { command: "mtr -4 target.com", description: "Force IPv4 in MTR." },
+    { command: "mtr -6 target.com", description: "Force IPv6 in MTR." },
   ];
 
   return (
     <div className="commands-container">
-      <h2>Advanced Nmap Commands</h2>
+      <h2>Advanced Traceroute Commands</h2>
       <ul>
         {commands.map((cmd, index) => (
           <li key={index}>
@@ -35,10 +36,10 @@ const AdvancedCommands = () => {
         ))}
       </ul>
       <footer>
-          <p>Created by Harshal Moon for cybersecurity enthusiasts</p>
-        </footer>
+        <p>Created by Harshal Moon for cybersecurity enthusiasts</p>
+      </footer>
     </div>
   );
 };
 
-export default AdvancedCommands;
+export default AdvancedCommand;
