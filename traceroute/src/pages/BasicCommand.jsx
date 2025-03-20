@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css"; // Import your CSS for styling
+import "../App.css"; // Import your CSS file
 
 const BasicCommand = () => {
   const commands = [
@@ -13,17 +13,18 @@ const BasicCommand = () => {
   ];
 
   return (
-    <div className="commands-container">
-      <h2>Basic Traceroute Commands</h2>
-      <ul>
+    <div className="command-container">
+      <h2 className="command-title">Basic Traceroute Commands</h2>
+      <ul className="command-list">
         {commands.map((cmd, index) => (
-          <li key={index}>
-            <code>{cmd.command}</code> {cmd.description}
+          <li key={index} className="command-item">
+            <span className="command-code">{cmd.command}</span>
+            <span className="command-description">{cmd.description}</span>
           </li>
         ))}
       </ul>
-      <footer>
-        <p>Created by Harshal Moon for cybersecurity enthusiasts</p>
+      <footer className="command-footer">
+        <p>Created by <span className="author-name">Harshal Moon</span> for cybersecurity enthusiasts</p>
       </footer>
     </div>
   );

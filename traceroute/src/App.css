@@ -45,7 +45,7 @@
 
 .terminal-container {
 
-  width: 80%;
+  width: 900px;
   margin: auto;
   margin-top: 2rem !important;
   background-color: #111;
@@ -116,4 +116,177 @@ footer {
   font-size: 14px;
   color: gray;
   text-align: center;
+}
+/* BasicCommand Component Styling */
+.command-container {
+  max-width: 900px; /* Increased width for better column spacing */
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', monospace;
+}
+
+.command-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* List Styling */
+.command-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Command Item Styling (Two Columns) */
+.command-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #292929;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.command-item:hover {
+  background-color: #3a3a3a;
+}
+
+/* Left Column (Command) */
+.command-code {
+  font-weight: bold;
+  color: #00ff00;
+  width: 45%;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+/* Right Column (Description) */
+.command-description {
+  width: 50%;
+  text-align: left;
+  color: #cccccc;
+}
+
+/* Footer Styling */
+.command-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.author-name {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.traceroute-page {
+  max-width: 900px;
+  margin: auto;
+  margin-top: 20px !important;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+/* Header */
+.traceroute-page header {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.traceroute-page h1 {
+  font-size: 28px;
+  color: #ffcc00;
+}
+
+.traceroute-page p {
+  font-size: 16px;
+  color: #cccccc;
+}
+
+/* Intro Section */
+.traceroute-page .intro {
+  margin-top: 20px;
+  padding: 15px;
+  background: #3a3f5a;
+  border-radius: 6px;
+}
+
+.traceroute-page .intro h2 {
+  color: #ff9800;
+}
+
+/* Features Section */
+.traceroute-page .features {
+  margin-top: 20px;
+  padding: 15px;
+  background: #4b3f5b;
+  border-radius: 6px;
+}
+
+.traceroute-page .features h2 {
+  color: #f06292;
+}
+
+.traceroute-page .features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.traceroute-page .features li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
+/* Navigation */
+.traceroute-page .navigation {
+  margin-top: 20px;
+  padding: 15px;
+  background: #34515e;
+  border-radius: 6px;
+}
+
+.traceroute-page .navigation h2 {
+  color: #ffcc00;
+}
+
+.traceroute-page .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.traceroute-page .nav-links a {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffeb3b;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #1e3a5f;
+  transition: background 0.3s, color 0.3s;
+}
+
+.traceroute-page .nav-links a:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+/* Footer */
+.traceroute-page footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
 }
