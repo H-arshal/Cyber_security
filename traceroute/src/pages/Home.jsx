@@ -53,8 +53,8 @@ const TraceroutePage = () => {
         <section className="navigation">
           <h2>Explore</h2>
           <div className="nav-links">
-            <Link to="/BasicTraceroute">📌 Basic Traceroute Commands</Link>
-            <Link to="/AdvancedTraceroute">
+            <Link to="/basic">📌 Basic Traceroute Commands</Link>
+            <Link to="/advance">
               ⚡ Advanced Traceroute Techniques
             </Link>
           </div>
