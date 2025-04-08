@@ -25,7 +25,7 @@ function App() {
   // App component is now much cleaner, just rendering sections
   return (
     <div className="App">
-      <h1>Comprehensive Device Information Dashboard</h1>
+      <h1>Device Information Dashboard .-|-.</h1>
       <p className="info" style={{ textAlign: 'center', marginBottom: '25px' }}>
         Data displayed for: {todayDate} (IST)
       </p>
