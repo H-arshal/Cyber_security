@@ -1,0 +1,325 @@
+/* src/App.css */
+
+/* --- CSS Variables --- */
+:root {
+  --font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+  --color-primary: #007bff;
+  --color-primary-dark: #0056b3;
+  --color-text: #343a40;
+  --color-text-muted: #6c757d;
+  --color-background: #ededed;
+  --color-section-bg: #ffffff;
+  --color-border: #dee2e6;
+  --color-table-border: #e9ecef;
+  --color-table-header-bg: #f1f3f5;
+  --color-table-stripe-bg: #f8f9fa;
+  --color-pre-bg: #e9ecef;
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+  --color-info-text: #17a2b8; /* For less critical info text */
+
+  --border-radius: 0.3rem;
+  --box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+  --box-shadow-lg: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+/* --- Base Styles --- */
+body {
+  font-family: var(--font-family-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+  font-size: 16px; /* Base font size */
+}
+
+/* --- Main App Container --- */
+.App {
+  max-width: 960px;
+  margin: var(--spacing-lg) auto;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  background-color: var(--color-section-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-lg);
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text); /* Darker text for headings */
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-primary-dark);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-table-border);
+  color: #495057; /* Slightly muted heading color */
+}
+
+h3 { /* Used for InfoTable title prop */
+  font-size: 1.15rem;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  color: #495057;
+  font-weight: 600;
+}
+
+/* --- Section Styling --- */
+section {
+  background-color: var(--color-section-bg); /* Sections have same bg as App for seamless look */
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+/* --- Buttons --- */
+button {
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 0.5rem 1rem; /* Slightly larger padding */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-radius: var(--border-radius);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin: var(--spacing-xs) var(--spacing-sm) var(--spacing-xs) 0; /* Consistent margin */
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #fff;
+}
+
+button:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Focus ring */
+}
+
+button:disabled {
+  background-color: #adb5bd; /* Grey for disabled */
+  border-color: #adb5bd;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* --- Status Indicators --- */
+.status-granted, .status-prompt, .status-denied {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem; /* Smaller radius for badges */
+  margin-left: var(--spacing-sm);
+}
+
+.status-granted {
+  color: #fff;
+  background-color: var(--color-success);
+}
+
+.status-prompt {
+  color: #212529; /* Darker text on yellow */
+  background-color: var(--color-warning);
+}
+
+.status-denied {
+  color: #fff;
+  background-color: var(--color-danger);
+}
+
+/* --- Paragraphs and Info Text --- */
+p {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+}
+
+.info { /* For less critical helper text */
+  color: var(--color-text-muted);
+  font-size: 0.875em;
+  font-style: italic;
+  margin-top: var(--spacing-sm);
+}
+
+.error { /* For error messages */
+  color: var(--color-danger);
+  font-weight: 500;
+  font-size: 0.9em;
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: var(--border-radius);
+}
+
+/* --- Values and Code Blocks --- */
+.value { /* Class for specific value spans if needed */
+  font-family: var(--font-family-mono);
+  color: var(--color-primary-dark);
+  font-weight: 500;
+}
+
+pre {
+  display: block;
+  padding: var(--spacing-md);
+  margin: 0 0 var(--spacing-md);
+  font-size: 0.9em;
+  color: var(--color-text);
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: var(--color-pre-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  overflow-x: auto; /* Add horizontal scroll if needed */
+  font-family: var(--font-family-mono);
+}
+
+/* --- InfoTable Styling --- */
+table {
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+  border-collapse: collapse; /* Remove space between borders */
+}
+
+th, td {
+  padding: 0.75rem; /* More padding */
+  vertical-align: top;
+  border-top: 1px solid var(--color-table-border); /* Only top border for rows */
+}
+
+th { /* Table Header Cell - used for keys in InfoTable */
+  font-weight: 600;
+  color: #495057;
+  background-color: var(--color-table-header-bg);
+  text-align: left;
+  width: 35%; /* Adjust as needed */
+  border-top: none; /* No top border for header cells */
+}
+
+td { /* Table Data Cell - used for values in InfoTable */
+   font-family: var(--font-family-mono); /* Monospace for values */
+   word-break: break-word; /* Prevent long values breaking layout */
+}
+
+/* Zebra Striping */
+tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.02); /* Very subtle striping */
+}
+tbody tr:nth-of-type(even) {
+  background-color: var(--color-section-bg); /* Match section bg */
+}
+
+
+/* Remove top border for first row */
+tbody tr:first-child th,
+tbody tr:first-child td {
+   border-top: none;
+}
+
+/* --- Lists (e.g., in OtherApisInfo) --- */
+ul {
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+li {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* --- Horizontal Rule --- */
+hr {
+  margin: var(--spacing-lg) 0;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+
+/* --- Basic Responsiveness --- */
+@media (max-width: 768px) {
+  .App {
+    margin: var(--spacing-md) auto;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  th, td {
+      padding: 0.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+    .App {
+        margin: var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.2rem; }
+
+    th {
+        width: 40%; /* Allow more space for keys on small screens */
+    }
+    th, td {
+        font-size: 0.9em; /* Slightly smaller text in tables */
+    }
+
+    /* Optional: Stack table cells on very small screens if needed */
+    /*
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    tr { border: 1px solid var(--color-border); margin-bottom: var(--spacing-md); }
+    th { width: auto; border: none; border-bottom: 1px solid var(--color-table-header-bg); }
+    td { border: none; border-bottom: 1px dotted var(--color-table-border); position: relative; padding-left: 50%; text-align: right; }
+    td:before { content: attr(data-label); position: absolute; left: 6px; width: 45%; padding-right: 10px; white-space: nowrap; text-align: left; font-weight: bold; }
+    */
+}
