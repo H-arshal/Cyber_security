@@ -1,8 +1,6 @@
-/* App.css */
-
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #130727;
   color: #d2bdf4;
 }
@@ -11,12 +9,12 @@ body {
   background-color: #170830;
   max-width: 950px;
   border-radius: 2rem;
-  /* padding-right: 40px !important; */
   margin: 0 auto;
   padding: 20px;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
   color: #d2bdf4;
 }
@@ -38,7 +36,17 @@ textarea {
   min-height: 80px;
   resize: vertical;
 }
-
+select {
+  background-color: #6622d3;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
 button {
   background-color: #6622d3;
   color: #ffffff;
@@ -60,7 +68,8 @@ hr {
   border: 1px solid #6622d3;
 }
 
-p, pre {
+p,
+pre {
   background-color: #1f103e;
   padding: 10px;
   border-radius: 8px;
@@ -70,21 +79,150 @@ p, pre {
 
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 15px;
-  background-color: #6622d3;
+  background-color: #1f103e;
+  padding: 1rem 2rem;
   color: white;
-  padding: 15px 20px;
-  border-radius: 12px;
-  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  height: 50px;
-  width: auto;
+  height: 40px;
+  margin-right: 1rem;
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-inline {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbar-inline a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar-inline a:hover {
+  background-color: var(--violet);
+  color: white;
+}
+
+.toggle {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #170830;
+  color: #333;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+  border-top: 1px solid #ddd;
+}
+.footer .social-links {
+  margin: 0.8rem 0;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  background-color: #1f103e;
+  border-radius: 8px;
+
+  padding: 10px;
+  gap: 0.5rem;
+}
+
+.footer .social-links a {
+  
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #7c3aed;
+}
+
+.footer p {
+  margin: 0.4rem 0;
+}
+
+.navbar {
+  background-color: var(--card-bg);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
   margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: var(--violet);
+  color: #fff;
+}
+
+.toggle:hover {
+  background-color: rgba(125, 58, 255, 0.1);
+}
+
+.toggle.active {
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  background-color: #6622d3;
 }
