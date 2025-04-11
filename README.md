@@ -1,8 +1,8 @@
 # 🔐 Cybersecurity Projects by Harshal Moon 🚀
 ## 🤝 Let’s Connect
 
-📍 **LinkedIn**: [Harshal Moon](https://www.linkedin.com/in/harshalmoon/)  
-🌐 **Portfolio**: [harshalmoon.netlify.app](https://harshal-portfolio-5mbz.onrender.com/)
+📍 **LinkedIn**: [Harshal Moon](https://www.linkedin.com/in/harshal-moon-064956174/)  
+🌐 **Portfolio**: [Portfolio](https://harshal-portfolio-5mbz.onrender.com/)
 ##
 
 Welcome to my **Cybersecurity Projects Repository** – your one-stop destination for hands-on cybersecurity experiments, code implementations, and real-world simulations.
