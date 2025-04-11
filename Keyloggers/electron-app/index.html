@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keyloggers Awareness</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    .welcome {
+      font-size: 1.2em;
+      color: #34495e;
+      margin-bottom: 20px;
+    }
+    section {
+      margin-top: 30px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .highlight {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-left: 4px solid #3498db;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Keyloggers Awareness</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name..." oninput="updateWelcome()" />
+    <div class="welcome" id="welcomeMessage">Welcome!</div>
+
+    <section>
+      <h2>Keylogging and Keyloggers</h2>
+      <p>Keyloggers, or keystroke loggers, are tools that record what a person types on a device. While there are legitimate and legal uses for keyloggers, many uses for keyloggers are malicious...</p>
+    </section>
+
+    <section>
+      <h2>Definition of Keyloggers</h2>
+      <p>Keyloggers are tools that can record every keystroke that you type into a computer or mobile keyboard...</p>
+    </section>
+
+    <section>
+      <h2>Information Captured by Keyloggers</h2>
+      <p>When keyloggers run, they track every keystroke entered and save the data in a file...</p>
+    </section>
+
+    <section>
+      <h2>Danger of Keystroke Loggers</h2>
+      <ul>
+        <li>Stealing credit card information</li>
+        <li>Unauthorized access to emails or banks</li>
+        <li>Corporate network infiltration</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Types of Keyloggers</h2>
+      <p>There are two types: hardware and software keyloggers...</p>
+    </section>
+
+    <section>
+      <h2>How Keyloggers Work</h2>
+      <ul>
+        <li>Web page scripts</li>
+        <li>Phishing</li>
+        <li>Social engineering</li>
+        <li>Unidentified software downloads</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Safe Keyloggers</h2>
+      <p>Some uses of keyloggers are legal, such as for parental control or employee monitoring...</p>
+    </section>
+
+    <section>
+      <h2>Protecting Yourself from Keyloggers</h2>
+      <p>Prevent keylogging attacks by verifying sources, avoiding suspicious downloads, using strong passwords, etc...</p>
+    </section>
+
+    <section>
+      <h2>Detecting and Removing Keyloggers</h2>
+      <p>Use Task Manager, check installed programs, and run antivirus software regularly...</p>
+    </section>
+
+    <section>
+      <h2>Tools to Prevent Keylogging</h2>
+      <ul>
+        <li>Use a firewall</li>
+        <li>Use a password manager</li>
+        <li>Update your system</li>
+        <li>Use antivirus software</li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    function updateWelcome() {
+      const name = document.getElementById("nameInput").value.trim();
+      const welcome = document.getElementById("welcomeMessage");
+      if (name) {
+        welcome.textContent = `Welcome, ${name}!`;
+      } else {
+        welcome.textContent = "Welcome!";
+      }
+    }
+  </script>
+</body>
+</html>
