@@ -1,7 +1,0 @@
-password
-hello
-123456
-qwerty
-letmein
-secret
-admin

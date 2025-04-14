@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.*;
 import orp.hashcracker.crackerService.CrackerService;
 import orp.hashcracker.model.CrackRequest;
 import orp.hashcracker.model.CrackResponse;
+import orp.hashcracker.model.EncryptRequest;
+import orp.hashcracker.model.EncryptResponse;
+
+import java.security.NoSuchAlgorithmException;
 
 @RestController
 public class CrackerController {
@@ -23,6 +27,13 @@ public class CrackerController {
         System.out.println("Received Request: " + cr);
         String crackedPassword = crackerService.crackPassword(cr.getEncryptedText(), cr.getAlgo());
         CrackResponse response = new CrackResponse(crackedPassword, "success");
+        return ResponseEntity.ok(response);
+    }
+
+    @PostMapping(value = "/encrypt")
+    public ResponseEntity<EncryptResponse> getEncrypt(@RequestBody EncryptRequest er) throws NoSuchAlgorithmException {
+        String plainText = crackerService.encryptText(er.getPlainText(),er.getAlgo());
+        EncryptResponse response = new EncryptResponse(plainText,"Success");
         return ResponseEntity.ok(response);
     }
 }
