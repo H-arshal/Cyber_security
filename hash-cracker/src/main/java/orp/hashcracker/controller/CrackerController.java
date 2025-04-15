@@ -27,13 +27,17 @@ public class CrackerController {
         System.out.println("Received Request: " + cr);
         String crackedPassword = crackerService.crackPassword(cr.getEncryptedText(), cr.getAlgo());
         CrackResponse response = new CrackResponse(crackedPassword, "success");
+        System.out.println("Okay Response");
         return ResponseEntity.ok(response);
     }
 
     @PostMapping(value = "/encrypt")
     public ResponseEntity<EncryptResponse> getEncrypt(@RequestBody EncryptRequest er) throws NoSuchAlgorithmException {
+        System.out.println("In Encrypt");
         String plainText = crackerService.encryptText(er.getPlainText(),er.getAlgo());
         EncryptResponse response = new EncryptResponse(plainText,"Success");
+        System.out.println("Completed Encryption");
+
         return ResponseEntity.ok(response);
     }
 }
