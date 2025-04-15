@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 📱 Device Information Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple, clean, and responsive web application built with **React.js** that captures and displays detailed information about the user’s device — including general browser details, geolocation data, and device motion/orientation values. Perfect for device diagnostics, educational demos, or browser capability testing.
 
-## Available Scripts
+## 🔗 Live Demo
 
-In the project directory, you can run:
+👉 [Device Information Dashboard (Live)](https://did-a3dh.onrender.com/)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📸 Preview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> _You can add a screenshot of the dashboard interface here later for better presentation._
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📖 Features
 
-### `npm run build`
+✅ **General Device & Browser Info**  
+Displays browser name, version, operating system, language, and more using the **Navigator API**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+✅ **Geolocation Data**  
+Fetches and displays latitude, longitude, accuracy, and timestamp using the **Geolocation API** (with user permission).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+✅ **Device Orientation & Motion**  
+Captures device orientation (alpha, beta, gamma) and acceleration values using the **DeviceOrientationEvent** and **DeviceMotionEvent** APIs (if supported by the device).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+✅ **iOS Permission Handling**  
+Specifically requests device motion and orientation access permissions for iOS devices as required by newer Safari security policies.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React.js**
+- **JavaScript**
+- **HTML5**
+- **CSS3**
+- **Navigator API**
+- **Geolocation API**
+- **Device Orientation & Motion APIs**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
+# Device Info Dashboard  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+A web dashboard that displays device information.  
 
-## Learn More
+## 🚀 Getting Started  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites  
+- Node.js (v14 or later)  
+- npm (usually comes with Node.js)  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🔧 Local Development  
 
-### Code Splitting
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/yourusername/device-info-dashboard.git
+   cd device-info-dashboard
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Install dependencies**  
+   ```bash
+   npm install
+   ```
 
-### Analyzing the Bundle Size
+3. **Start the development server**  
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **Open in browser**  
+   Visit: [http://localhost:3000](http://localhost:3000)  
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🌐 Deployment  
+Hosted live on Render:  
+[👉 Live Demo](https://did-a3dh.onrender.com/)  
